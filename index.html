@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body class="light-theme">
+    <div class="header">
+        <h1>Pattern Generator</h1>
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <div class="theme-toggle-circle"></div>
+            <svg class="icon sun-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="12" cy="12" r="5" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="12" y1="2" x2="12" y2="5" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="12" y1="19" x2="12" y2="22" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="5" y1="12" x2="2" y2="12" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="22" y1="12" x2="19" y2="12" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="4.22" y1="4.22" x2="6.34" y2="6.34" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="17.66" y1="17.66" x2="19.78" y2="19.78" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="17.66" y1="6.34" x2="19.78" y2="4.22" stroke="#ffcc00" stroke-width="2"/>
+                <line x1="4.22" y1="19.78" x2="6.34" y2="17.66" stroke="#ffcc00" stroke-width="2"/>
+            </svg>
+            <svg class="icon moon-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M21 12.79C20.74 12.84 20.49 12.86 20.23 12.86C15.89 12.86 12.23 9.2 12.23 4.86C12.23 4.6 12.24 4.35 12.27 4.1C7.95 4.62 4.58 8.35 4.58 12.86C4.58 17.57 8.22 21.2 12.92 21.2C17.43 21.2 21.17 17.83 21.69 13.51C21.44 13.54 21.18 13.56 21 12.79Z" fill="#f0f0f0"/>
+            </svg>
+        </div>
+    </div>
+    
+    <label for="patternType">Choose Pattern:</label>
+    <select id="patternType">
+        <option value="pyramid1">Pyramid Pattern 1</option>
+        <option value="pyramid2">Pyramid Pattern 2</option>
+        <option value="alphabet">Alphabet Pattern</option>
+        <option value="incrementDecrement">Increment & Decrement Pattern</option>
+        <option value="reversePyramid">Reverse Pyramid Pattern</option>
+    </select>
+
+    <label for="length">Enter Length:</label>
+    <input type="number" id="length" min="2" value="4">
+    
+    <button onclick="generatePattern()">Generate Pattern</button>
+    <div class="pattern-box" id="patternOutput"></div>
+</body>
+</html>
